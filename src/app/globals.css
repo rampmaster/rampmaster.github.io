@@ -1,29 +1,31 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 
-@tailwind utilities;
+/*
+  Configuración CRÍTICA para Tailwind v4 + next-themes:
+  Sobrescribimos la variante 'dark' para que responda a la clase CSS .dark
+  en lugar de solo a la preferencia del sistema operativo.
+*/
+@variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Variables CSS para el tema */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Valores para modo oscuro */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }

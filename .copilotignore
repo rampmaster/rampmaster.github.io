@@ -1,0 +1,28 @@
+# Archivos ignorados para GitHub Copilot
+# Excluir archivos grandes o irrelevantes mejora la calidad de las sugerencias.
+
+# Dependencias y Archivos de Bloqueo
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Artefactos de Construcción
+.next/
+out/
+build/
+dist/
+
+# Archivos Estáticos y Binarios
+public/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+*.zip
+
+# Logs
+*.log

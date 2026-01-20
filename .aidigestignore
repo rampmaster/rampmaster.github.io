@@ -1,0 +1,22 @@
+# Archivos ignorados para herramientas de resumen de IA (como aidigest)
+
+# Dependencias
+node_modules/
+
+# Builds
+.next/
+out/
+build/
+dist/
+
+# IDEs y Git
+.idea/
+.vscode/
+.git/
+
+# Archivos de bloqueo grandes
+package-lock.json
+yarn.lock
+
+# Archivos estáticos
+public/
