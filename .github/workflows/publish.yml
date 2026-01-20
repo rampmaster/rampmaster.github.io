@@ -33,6 +33,16 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx next build
 
+      # PASO DE DEPURACIÓN: Listar archivos para ver qué se generó
+      - name: List output files 📂
+        run: |
+          echo "Listing root directory:"
+          ls -la
+          echo "Listing .next directory (if exists):"
+          ls -la .next || echo ".next not found"
+          echo "Listing out directory (if exists):"
+          ls -la out || echo "out not found"
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
