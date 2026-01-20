@@ -6,7 +6,7 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 
 export const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between p-4 sm:p-8 border-b border-gray-100 dark:border-gray-800">
+    <nav className="w-full flex items-center justify-between p-4 sm:p-8 border-b border-gray-100 dark:border-gray-800 print:hidden">
       <Link href="/" className="flex items-center gap-2">
         <Image
           className="dark:invert"

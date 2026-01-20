@@ -29,3 +29,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* ESTILOS DE IMPRESIÓN (ATS Friendly) */
+@media print {
+  @page {
+    margin: 1.5cm; /* Margen razonable para impresoras */
+    size: auto;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ocultar elementos de UI del navegador si es posible */
+  html {
+    height: auto;
+  }
+}

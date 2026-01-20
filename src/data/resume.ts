@@ -40,7 +40,7 @@ export const resumeDataEs: ResumeData = {
     linkedin: "https://linkedin.com/in/rmorenp/?locale=en_US",
     medium: "https://medium.com/@rampmaster",
     github: "https://github.com/rampmaster",
-    email: "rmorenp@computer.org"
+    email: "rmorenp@gmail.com"
   },
   skills: [
     "SQL",

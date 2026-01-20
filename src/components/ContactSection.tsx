@@ -11,7 +11,7 @@ export const ContactSection = () => {
   
   if (state.succeeded) {
     return (
-      <section className="w-full max-w-4xl mx-auto px-4 py-16 text-center">
+      <section className="w-full max-w-4xl mx-auto px-4 py-16 text-center print:hidden">
         <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border border-green-100 dark:border-green-800">
           <h2 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-2">
             {labels.contact.successTitle}
@@ -31,7 +31,7 @@ export const ContactSection = () => {
   }
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 py-16" id="contact">
+    <section className="w-full max-w-4xl mx-auto px-4 py-16 print:hidden" id="contact">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">{labels.contact.title}</h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">

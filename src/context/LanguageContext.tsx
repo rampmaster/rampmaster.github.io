@@ -15,13 +15,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('es');
+  // Default language set to English for SEO priority
+  const [language, setLanguage] = useState<Language>('en');
 
-  // Opcional: Detectar idioma del navegador al cargar
+  // Opcional: Detectar idioma del navegador al cargar (pero priorizando EN si no es ES explícito)
   useEffect(() => {
     const browserLang = navigator.language.split('-')[0];
-    if (browserLang === 'en') {
-      setLanguage('en');
+    if (browserLang === 'es') {
+      setLanguage('es');
     }
   }, []);
 

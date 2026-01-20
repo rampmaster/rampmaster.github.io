@@ -24,19 +24,19 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Roberto Moreno | Jefe Técnico & CTO",
+    default: "Roberto Moreno | Technical Lead & CTO",
     template: "%s | Roberto Moreno",
   },
-  description: "Portafolio profesional de Roberto Andrés Moreno Pérez. Jefe Técnico de Ingeniería de Software y CTO con experiencia en Symfony, PHP, Python y liderazgo de equipos.",
-  keywords: ["Roberto Moreno", "CTO", "Jefe Técnico", "Software Engineer", "Symfony", "PHP", "Python", "Full Stack", "Chile"],
+  description: "Professional portfolio of Roberto Andrés Moreno Pérez. Technical Lead Software Engineering and CTO with expertise in Symfony, PHP, Python, and team leadership.",
+  keywords: ["Roberto Moreno", "CTO", "Technical Lead", "Software Engineer", "Symfony", "PHP", "Python", "Full Stack", "Chile", "Remote"],
   authors: [{ name: "Roberto Moreno", url: "https://rampmaster.dev" }],
   creator: "Roberto Moreno",
   openGraph: {
     type: "website",
-    locale: "es_CL",
+    locale: "en_US",
     url: "https://rampmaster.dev",
-    title: "Roberto Moreno | Jefe Técnico & CTO",
-    description: "Explorador de nuevas tecnologías y líder técnico. Descubre mi trayectoria y proyectos.",
+    title: "Roberto Moreno | Technical Lead & CTO",
+    description: "Explorer of new technologies and technical leader. Discover my career and projects.",
     siteName: "Roberto Moreno Portfolio",
     images: [
       {
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roberto Moreno | Jefe Técnico & CTO",
-    description: "Portafolio profesional y CV de Roberto Moreno.",
+    title: "Roberto Moreno | Technical Lead & CTO",
+    description: "Professional portfolio and CV of Roberto Moreno.",
     creator: "@rampmaster",
   },
   icons: {
@@ -64,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300`}
       >
