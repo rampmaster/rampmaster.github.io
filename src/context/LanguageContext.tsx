@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { resumeDataEs, resumeDataEn, uiLabels, ResumeData } from '@/data/resume';
+import { projectsEs, projectsEn, projectLabels, Project } from '@/data/projects';
 
 type Language = 'es' | 'en';
 
@@ -10,6 +11,8 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   resumeData: ResumeData;
   labels: typeof uiLabels.es;
+  projects: Project[];
+  projectLabels: typeof projectLabels.es;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -31,6 +34,8 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     setLanguage,
     resumeData: language === 'es' ? resumeDataEs : resumeDataEn,
     labels: language === 'es' ? uiLabels.es : uiLabels.en,
+    projects: language === 'es' ? projectsEs : projectsEn,
+    projectLabels: language === 'es' ? projectLabels.es : projectLabels.en,
   };
 
   return (
