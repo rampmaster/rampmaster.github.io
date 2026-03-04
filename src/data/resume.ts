@@ -132,7 +132,7 @@ export const resumeDataEs: ResumeData = {
     {
       institution: "Universidad Andrés Bello",
       degree: "Master of Computer Sciences (MCS)",
-      period: "2024 – 2025 (En curso)"
+      period: "2024 – 2026"
     },
     {
       institution: "Universidad Andrés Bello",
@@ -244,7 +244,7 @@ export const resumeDataEn: ResumeData = {
     {
       institution: "Universidad Andrés Bello",
       degree: "Master of Computer Sciences (MCS)",
-      period: "2024 – 2025 (In progress)"
+      period: "2024 – 2026"
     },
     {
       institution: "Universidad Andrés Bello",
