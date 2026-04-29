@@ -62,6 +62,12 @@ export const resumeDataEs: ResumeData = {
   ],
   experience: [
     {
+      company: "DUOC UC",
+      role: "Docente",
+      period: "2026 – Actualidad",
+      description: "Docente de las asignaturas de la especialidad de Ingeniería  de Software."
+    },
+    {
       company: "AgenciaSur SpA",
       role: "Jefe técnico de ingeniería de software",
       period: "2018 – 2025",
