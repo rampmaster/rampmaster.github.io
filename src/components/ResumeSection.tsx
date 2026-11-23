@@ -112,6 +112,9 @@ export const ResumeSection = () => {
                     <span className="hidden print:inline text-gray-400 print:text-black">-</span>
                     <p className="text-sm text-gray-500 dark:text-gray-500 print:text-black print:text-sm">{edu.period}</p>
                   </div>
+                  {edu.detail && (
+                    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 print:text-black">{edu.detail}</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -194,6 +197,13 @@ export const ResumeSection = () => {
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed print:text-black print:text-sm print:leading-snug">
                         {vol.description}
                       </p>
+                    )}
+                    {vol.highlights && vol.highlights.length > 0 && (
+                      <ul className="mt-2 space-y-1 list-disc pl-5 text-gray-700 dark:text-gray-300 print:mt-1 print:text-black print:text-sm print:leading-snug">
+                        {vol.highlights.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
                     )}
                   </div>
                 ))}
