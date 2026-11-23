@@ -3,12 +3,21 @@ export interface Experience {
   role: string;
   period: string;
   description: string;
+  /** Logros destacados, se muestran como viñetas bajo la descripción. */
+  highlights?: string[];
 }
 
 export interface Education {
   institution: string;
   degree: string;
   period: string;
+}
+
+export interface Volunteering {
+  organization: string;
+  role: string;
+  period: string;
+  description?: string;
 }
 
 export interface SocialLinks {
@@ -27,6 +36,7 @@ export interface ResumeData {
   skills: string[];
   certifications: string[];
   experience: Experience[];
+  volunteering: Volunteering[];
   education: Education[];
 }
 
@@ -35,9 +45,9 @@ export const resumeDataEs: ResumeData = {
   name: "Roberto Andrés Moreno Pérez",
   location: "Gran Santiago, Chile",
   languages: ["Español (nativo)", "Inglés (nivel limitado)"],
-  summary: "Explorador de nuevas tecnologías, con interés en sistemas de gestión y optimización de procesos de información. Experiencia sólida en educación, capacitación e investigación, liderando equipos técnicos y desarrollando soluciones backend robustas.",
+  summary: "Ingeniero de software y docente de Ingeniería de Software en DUOC UC. Más de 15 años desarrollando soluciones backend robustas y liderando equipos técnicos, con interés en sistemas de gestión y optimización de procesos de información.",
   social: {
-    linkedin: "https://linkedin.com/in/rmorenp/?locale=en_US",
+    linkedin: "https://linkedin.com/in/rmorenp",
     medium: "https://medium.com/@rampmaster",
     github: "https://github.com/rampmaster",
     email: "rmorenp@gmail.com"
@@ -50,7 +60,10 @@ export const resumeDataEs: ResumeData = {
     "Python",
     "MySQL",
     "Redis",
-    "Sistemas de colas / AMQL",
+    "Sistemas de colas / AMQP",
+    "Java / Spring Boot",
+    "React",
+    "Docker",
     "Desarrollo Backend",
     "Coordinación de equipos técnicos"
   ],
@@ -65,7 +78,7 @@ export const resumeDataEs: ResumeData = {
       company: "DUOC UC",
       role: "Docente",
       period: "2026 – Actualidad",
-      description: "Docente de las asignaturas de la especialidad de Ingeniería  de Software."
+      description: "Docente de las asignaturas de la especialidad de Ingeniería de Software."
     },
     {
       company: "AgenciaSur SpA",
@@ -134,10 +147,18 @@ export const resumeDataEs: ResumeData = {
       description: "Práctica industrial enfocada en PHP, MySQL y JavaScript."
     }
   ],
+  volunteering: [
+    {
+      organization: "IEEE Computer Society",
+      role: "Vice Chair — Partnerships & Operations (GSAMD)",
+      period: "Hasta dic. 2026",
+      description: "Coordinación de alianzas y operaciones de la iniciativa GSAMD."
+    }
+  ],
   education: [
     {
       institution: "Universidad Andrés Bello",
-      degree: "Master of Computer Sciences (MCS)",
+      degree: "Magíster en Ciencias de la Computación (MCS)",
       period: "2024 – 2026"
     },
     {
@@ -158,7 +179,7 @@ export const resumeDataEn: ResumeData = {
   name: "Roberto Andrés Moreno Pérez",
   location: "Greater Santiago, Chile",
   languages: ["Spanish (Native)", "English (Limited working proficiency)"],
-  summary: "Explorer of new technologies, interested in management systems and information process optimization. Solid experience in education, training, and research, leading technical teams and developing robust backend solutions.",
+  summary: "Software engineer and Software Engineering instructor at DUOC UC. Over 15 years building robust backend solutions and leading technical teams, with an interest in management systems and information process optimization.",
   social: resumeDataEs.social, // Mismos enlaces
   skills: [
     "SQL",
@@ -168,7 +189,10 @@ export const resumeDataEn: ResumeData = {
     "Python",
     "MySQL",
     "Redis",
-    "Queue Systems / AMQL",
+    "Queue Systems / AMQP",
+    "Java / Spring Boot",
+    "React",
+    "Docker",
     "Backend Development",
     "Technical Team Coordination"
   ],
@@ -179,6 +203,12 @@ export const resumeDataEn: ResumeData = {
     "Learn to program with Qiskit (Quantum Computing School)"
   ],
   experience: [
+    {
+      company: "DUOC UC",
+      role: "Instructor",
+      period: "2026 – Present",
+      description: "Instructor for courses in the Software Engineering specialization."
+    },
     {
       company: "AgenciaSur SpA",
       role: "Technical Lead Software Engineering",
@@ -246,6 +276,14 @@ export const resumeDataEn: ResumeData = {
       description: "Industrial internship focused on PHP, MySQL, and JavaScript."
     }
   ],
+  volunteering: [
+    {
+      organization: "IEEE Computer Society",
+      role: "Vice Chair — Partnerships & Operations (GSAMD)",
+      period: "Through Dec. 2026",
+      description: "Coordination of partnerships and operations for the GSAMD initiative."
+    }
+  ],
   education: [
     {
       institution: "Universidad Andrés Bello",
@@ -276,7 +314,9 @@ export const uiLabels = {
       skills: "Aptitudes",
       education: "Educación",
       certifications: "Certificaciones",
-      experience: "Experiencia Profesional"
+      experience: "Experiencia Profesional",
+      volunteering: "Voluntariado",
+      languages: "Idiomas"
     },
     contact: {
       title: "Contacto",
@@ -301,7 +341,9 @@ export const uiLabels = {
       skills: "Skills",
       education: "Education",
       certifications: "Certifications",
-      experience: "Professional Experience"
+      experience: "Professional Experience",
+      volunteering: "Volunteering",
+      languages: "Languages"
     },
     contact: {
       title: "Contact",

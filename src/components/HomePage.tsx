@@ -5,13 +5,13 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import { ContactSection } from "@/components/ContactSection";
 
 /**
- * Página de inicio (Home).
+ * Página principal, compartida por las rutas / (inglés) y /es (español).
  *
  * Muestra el portafolio profesional completo, incluyendo CV, Proyectos y Contacto.
  *
  * @returns {JSX.Element} El componente de la página de inicio.
  */
-export default function Home() {
+export default function HomePage() {
     return (
         <div className="min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)]">
             
