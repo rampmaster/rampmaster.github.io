@@ -112,6 +112,9 @@ export const ResumeSection = () => {
                     <span className="hidden print:inline text-gray-400 print:text-black">-</span>
                     <p className="text-sm text-gray-500 dark:text-gray-500 print:text-black print:text-sm">{edu.period}</p>
                   </div>
+                  {edu.detail && (
+                    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 print:text-black">{edu.detail}</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -125,6 +128,18 @@ export const ResumeSection = () => {
             <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black print:text-sm">
               {resumeData.certifications.map((cert, index) => (
                 <li key={index}>{cert}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Idiomas */}
+          <div className="break-inside-avoid">
+            <h2 className="text-2xl font-bold mb-6 border-b pb-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white print:text-black print:text-xl print:mb-2 print:border-gray-400 print:uppercase print:tracking-wide">
+              {labels.resume.languages}
+            </h2>
+            <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black print:text-sm">
+              {resumeData.languages.map((lang, index) => (
+                <li key={index}>{lang}</li>
               ))}
             </ul>
           </div>
@@ -152,9 +167,49 @@ export const ResumeSection = () => {
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed print:text-black print:text-sm print:leading-snug print:text-justify">
                   {job.description}
                 </p>
+                {job.highlights && job.highlights.length > 0 && (
+                  <ul className="mt-3 space-y-1 list-disc pl-5 text-gray-700 dark:text-gray-300 print:mt-1 print:text-black print:text-sm print:leading-snug">
+                    {job.highlights.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
+
+          {/* Voluntariado */}
+          {resumeData.volunteering.length > 0 && (
+            <div className="mt-12 print:mt-6">
+              <h2 className="text-2xl font-bold mb-8 border-b pb-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white print:text-black print:text-xl print:mb-4 print:border-gray-400 print:uppercase print:tracking-wide">
+                {labels.resume.volunteering}
+              </h2>
+              <div className="space-y-6 print:space-y-4">
+                {resumeData.volunteering.map((vol, index) => (
+                  <div key={index} className="break-inside-avoid">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white print:text-black print:text-lg">{vol.role}</h3>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-gray-600 dark:text-gray-400 mb-2 print:text-black print:flex-row print:gap-2 print:mb-1">
+                      <span className="font-medium text-black dark:text-white print:text-black print:font-bold">{vol.organization}</span>
+                      <span className="hidden sm:inline text-gray-400 print:inline print:text-black">•</span>
+                      <span className="text-sm print:text-black">{vol.period}</span>
+                    </div>
+                    {vol.description && (
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed print:text-black print:text-sm print:leading-snug">
+                        {vol.description}
+                      </p>
+                    )}
+                    {vol.highlights && vol.highlights.length > 0 && (
+                      <ul className="mt-2 space-y-1 list-disc pl-5 text-gray-700 dark:text-gray-300 print:mt-1 print:text-black print:text-sm print:leading-snug">
+                        {vol.highlights.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { LanguageProvider } from "@/context/LanguageContext";
+import { LanguageProvider, type Language } from "@/context/LanguageContext";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ language, children }: { language: Language; children: React.ReactNode }) {
   return (
     <NextThemesProvider
       attribute="class"
@@ -12,7 +12,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <LanguageProvider>
+      <LanguageProvider language={language}>
         {children}
       </LanguageProvider>
     </NextThemesProvider>

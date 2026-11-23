@@ -1,12 +1,12 @@
 # Rampmaster.dev
 
 ## 📋 Descripción del Proyecto
-Este repositorio contiene el código fuente para el sitio web personal/profesional **rampmaster.dev**. El proyecto está actualmente en proceso de renovación visual y técnica.
+Este repositorio contiene el código fuente para el sitio web personal/profesional **rampmaster.dev**. Incluye el CV en español e inglés, exportable a PDF desde el botón de impresión.
 
 ## 🚀 Stack Tecnológico
 El proyecto utiliza tecnologías modernas de desarrollo web para asegurar rendimiento, escalabilidad y mantenibilidad:
 
-*   **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+*   **Framework:** [Next.js 15](https://nextjs.org/) (App Router, exportación estática)
 *   **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
 *   **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
 *   **Gestión de Paquetes:** npm
@@ -49,14 +49,26 @@ Los archivos generados se ubicarán en la carpeta `out/` (configuración por def
 
 ```
 rampmaster.github.io/
-├── .github/            # Workflows de GitHub Actions
-├── public/             # Archivos estáticos (imágenes, fuentes, etc.)
+├── .github/                 # Workflows de GitHub Actions (deploy a GitHub Pages)
+├── public/                  # Archivos estáticos (logo, favicon, imagen OG)
 ├── src/
-│   └── app/            # Código fuente de la aplicación (Next.js App Router)
-├── next.config.js      # Configuración de Next.js
-├── tailwind.config.js  # Configuración de Tailwind CSS
-└── package.json        # Dependencias y scripts
+│   ├── app/
+│   │   ├── (en)/            # Raíz en inglés: "/"  (html lang="en")
+│   │   ├── (es)/es/         # Raíz en español: "/es" (html lang="es")
+│   │   └── globals.css      # Estilos globales y de impresión (CV en PDF)
+│   ├── components/          # Secciones (CV, proyectos, contacto) y UI
+│   ├── context/             # Contexto de idioma (definido por la ruta)
+│   ├── data/                # Contenido del CV y proyectos en ES/EN
+│   └── lib/seo.ts           # Metadatos, canonical y hreflang por idioma
+├── next.config.js           # Exportación estática
+└── package.json             # Dependencias y scripts
 ```
+
+### Editar el CV
+Todo el contenido está en `src/data/resume.ts`, con un objeto por idioma (`resumeDataEs` y `resumeDataEn`). **Cualquier cambio debe hacerse en ambos.** Cada experiencia acepta `highlights`, una lista de logros que se muestran como viñetas.
+
+### Variables de entorno
+- `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` (secreto del repositorio): si no está definido, no se carga Google Analytics.
 
 ## 🤝 Contribución
 1.  Haz un Fork del proyecto.
@@ -66,4 +78,4 @@ rampmaster.github.io/
 5.  Abre un Pull Request.
 
 ## 📄 Licencia
-Este proyecto está bajo la licencia [MIT](LICENSE) (o especificar si es otra).
+Este proyecto está bajo la licencia [MIT](LICENSE).

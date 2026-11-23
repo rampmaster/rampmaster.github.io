@@ -1,10 +1,14 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { resumeDataEs, resumeDataEn, uiLabels, ResumeData } from '@/data/resume';
 import { projectsEs, projectsEn, projectLabels, Project } from '@/data/projects';
 
-type Language = 'es' | 'en';
+export type Language = 'es' | 'en';
+
+const PATHS: Record<Language, string> = { en: '/', es: '/es' };
+const STORAGE_KEY = 'preferred-language';
 
 interface LanguageContextType {
   language: Language;
@@ -17,17 +21,36 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  // Default language set to English for SEO priority
-  const [language, setLanguage] = useState<Language>('en');
+/**
+ * El idioma lo define la ruta (/ = inglés, /es = español), así cada versión se
+ * exporta como HTML estático propio e indexable. Cambiar de idioma navega a la otra ruta.
+ */
+export const LanguageProvider = ({ language, children }: { language: Language; children: React.ReactNode }) => {
+  const router = useRouter();
+  const pathname = usePathname();
 
-  // Opcional: Detectar idioma del navegador al cargar (pero priorizando EN si no es ES explícito)
-  useEffect(() => {
-    const browserLang = navigator.language.split('-')[0];
-    if (browserLang === 'es') {
-      setLanguage('es');
+  const setLanguage = (lang: Language) => {
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      // Almacenamiento no disponible: solo se omite recordar la preferencia.
     }
-  }, []);
+    if (lang !== language) router.push(PATHS[lang]);
+  };
+
+  // Primera visita a la versión en inglés con navegador en español: redirigir a /es.
+  useEffect(() => {
+    if (language !== 'en' || pathname !== '/') return;
+    let stored: string | null = null;
+    try {
+      stored = localStorage.getItem(STORAGE_KEY);
+    } catch {
+      return;
+    }
+    if (!stored && navigator.language.split('-')[0] === 'es') {
+      router.replace(PATHS.es);
+    }
+  }, [language, pathname, router]);
 
   const value = {
     language,

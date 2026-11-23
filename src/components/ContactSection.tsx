@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export const ContactSection = () => {
   const { labels } = useLanguage();
-  // REEMPLAZA "TU_FORM_ID_AQUI" CON EL ID QUE TE DE FORMSPREE
+  // ID del formulario en Formspree
   const [state, handleSubmit] = useForm("mqeeddoq");
   
   if (state.succeeded) {

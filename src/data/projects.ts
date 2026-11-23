@@ -9,41 +9,39 @@ export interface Project {
 
 export const projectsEs: Project[] = [
   {
-    title: "Plataforma IoT SENSOLABS",
-    description: "Diseño e implementación de la estructura técnica y procesos para la gestión de dispositivos IoT. Creación de productos y conformación del equipo de desarrollo.",
-    tags: ["Python", "IoT", "Cloud Architecture", "Team Leadership"],
-    link: "https://sensolabs.com", // Placeholder
+    title: "Sistema de Licitaciones BEX",
+    description: "Plataforma de licitaciones, auditoría y compras menores para BancoEstado Express, con más de 14.000 usuarios entre personal del banco y proveedores. Arquitectura cloud híbrida en AWS e infraestructura privada.",
+    tags: ["AWS", "MySQL", "Cloud híbrido", "Banca", "Liderazgo técnico"],
   },
   {
-    title: "Fidelizador 3.0",
-    description: "Desarrollo y mantenimiento de plataforma de Email Marketing. Migración a arquitectura moderna y optimización de rendimiento para alto volumen de envíos.",
-    tags: ["Symfony", "PHP", "Redis", "MySQL", "Big Data"],
+    title: "UnaCola — SENSOLABS",
+    description: "Sistema dinámico de gestión de filas de espera. En su prueba de concepto en Costanera Center atendió a más de 25.000 usuarios en la semana previa a Navidad con un SLA superior al 99 %.",
+    tags: ["AWS Lambda", "Amplify", "Serverless", "Startup"],
+  },
+  {
+    title: "Fidelizador Relay",
+    description: "Servicio de despachos de correo personalizados dentro de Fidelizador 3.0, plataforma de email marketing con capacidad instalada de más de 20 millones de correos por día. Lideré esta iniciativa junto al desarrollo de los módulos de envío masivo.",
+    tags: ["Symfony", "PHP", "Python", "Redis", "MySQL"],
     link: "https://fidelizador.com",
-  },
-  {
-    title: "Gestión AgenciaSur",
-    description: "Sistema de coordinación para equipos internos y externos. Desarrollo de soluciones complejas a medida para clientes corporativos.",
-    tags: ["Symfony", "React", "SQL", "Project Management"],
   }
 ];
 
 export const projectsEn: Project[] = [
   {
-    title: "SENSOLABS IoT Platform",
-    description: "Design and implementation of technical structure and processes for IoT device management. Product creation and development team formation.",
-    tags: ["Python", "IoT", "Cloud Architecture", "Team Leadership"],
-    link: "https://sensolabs.com",
+    title: "BEX Procurement System",
+    description: "Procurement, audit and minor-purchase platform for BancoEstado Express, serving over 14,000 bank staff and vendor users. Hybrid cloud architecture on AWS and private infrastructure.",
+    tags: ["AWS", "MySQL", "Hybrid Cloud", "Banking", "Technical Leadership"],
   },
   {
-    title: "Fidelizador 3.0",
-    description: "Development and maintenance of Email Marketing platform. Migration to modern architecture and performance optimization for high-volume sending.",
-    tags: ["Symfony", "PHP", "Redis", "MySQL", "Big Data"],
+    title: "UnaCola — SENSOLABS",
+    description: "Dynamic queue management system. Its proof of concept at Costanera Center served over 25,000 users in the week before Christmas with an SLA above 99%.",
+    tags: ["AWS Lambda", "Amplify", "Serverless", "Startup"],
+  },
+  {
+    title: "Fidelizador Relay",
+    description: "Customized email dispatch service within Fidelizador 3.0, an email marketing platform with an installed capacity of over 20 million emails per day. I led this initiative alongside the development of the bulk-sending modules.",
+    tags: ["Symfony", "PHP", "Python", "Redis", "MySQL"],
     link: "https://fidelizador.com",
-  },
-  {
-    title: "AgenciaSur Management",
-    description: "Coordination system for internal and external teams. Development of complex custom solutions for corporate clients.",
-    tags: ["Symfony", "React", "SQL", "Project Management"],
   }
 ];
 
