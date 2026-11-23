@@ -92,7 +92,7 @@ export const resumeDataEs: ResumeData = {
       company: "DUOC UC",
       role: "Docente",
       period: "2026 – Actualidad",
-      description: "Docente de asignaturas de la especialidad de Ingeniería de Software: DSY1102, DSY1103, DSY1104, DSY1106 y RQY1102.",
+      description: "Docente de la especialidad de Ingeniería de Software: Desarrollo Orientado a Objetos (DSY1102), Desarrollo Fullstack I, II y III (DSY1103, DSY1104, DSY1106) e Ingeniería de Software (RQY1102).",
       highlights: [
         "Imparto 5–6 secciones por semestre, de 15 a 30 estudiantes cada una.",
         "Creé material de apoyo abierto para los estudiantes, publicado en el repositorio DonKiwiCL en GitHub.",
@@ -141,6 +141,7 @@ export const resumeDataEs: ResumeData = {
       period: "2012 – 2018",
       description: "Desarrollo de la plataforma de email marketing Fidelizador 3.0 con Symfony, PHP, Python, Bash, SQL y NoSQL, en un equipo de hasta 5 personas.",
       highlights: [
+        "Plataforma con capacidad instalada de más de 20 millones de correos por día.",
         "Desarrollé los módulos de envío masivo y mejoré el soporte de envíos con múltiples fuentes de datos.",
         "Lideré la creación de Fidelizador Relay, servicio para despachos personalizados.",
         "Implementé el flujo de correo personalizado bajo demanda."
@@ -169,7 +170,7 @@ export const resumeDataEs: ResumeData = {
       description: "Coordinación de alianzas y operaciones de la iniciativa GSAMD."
     },
     {
-      organization: "IEEE",
+      organization: "IEEE Computer Society",
       role: "Region 9 Coordinator (Latinoamérica)",
       period: "2022 – 2025",
       highlights: [
@@ -241,7 +242,7 @@ export const resumeDataEn: ResumeData = {
       company: "DUOC UC",
       role: "Instructor",
       period: "2026 – Present",
-      description: "Instructor for Software Engineering courses: DSY1102, DSY1103, DSY1104, DSY1106 and RQY1102.",
+      description: "Instructor in the Software Engineering program: Object-Oriented Development (DSY1102), Fullstack Development I, II and III (DSY1103, DSY1104, DSY1106) and Software Engineering (RQY1102).",
       highlights: [
         "Teach 5–6 sections per semester, with 15 to 30 students each.",
         "Created open learning materials for students, published in the DonKiwiCL repository on GitHub.",
@@ -290,6 +291,7 @@ export const resumeDataEn: ResumeData = {
       period: "2012 – 2018",
       description: "Development of the Fidelizador 3.0 email marketing platform with Symfony, PHP, Python, Bash, SQL and NoSQL, in a team of up to 5 people.",
       highlights: [
+        "Platform with an installed capacity of over 20 million emails per day.",
         "Developed the bulk-sending modules and improved support for sends with multiple data sources.",
         "Led the creation of Fidelizador Relay, a service for customized email dispatches.",
         "Implemented the on-demand personalized email flow."
@@ -318,7 +320,7 @@ export const resumeDataEn: ResumeData = {
       description: "Coordination of partnerships and operations for the GSAMD initiative."
     },
     {
-      organization: "IEEE",
+      organization: "IEEE Computer Society",
       role: "Region 9 Coordinator (Latin America)",
       period: "2022 – 2025",
       highlights: [

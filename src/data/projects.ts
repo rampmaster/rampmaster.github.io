@@ -20,7 +20,7 @@ export const projectsEs: Project[] = [
   },
   {
     title: "Fidelizador Relay",
-    description: "Servicio de despachos de correo personalizados dentro de la plataforma de email marketing Fidelizador 3.0, iniciativa que lideré junto al desarrollo de los módulos de envío masivo.",
+    description: "Servicio de despachos de correo personalizados dentro de Fidelizador 3.0, plataforma de email marketing con capacidad instalada de más de 20 millones de correos por día. Lideré esta iniciativa junto al desarrollo de los módulos de envío masivo.",
     tags: ["Symfony", "PHP", "Python", "Redis", "MySQL"],
     link: "https://fidelizador.com",
   }
@@ -39,7 +39,7 @@ export const projectsEn: Project[] = [
   },
   {
     title: "Fidelizador Relay",
-    description: "Customized email dispatch service within the Fidelizador 3.0 email marketing platform, an initiative I led alongside the development of the bulk-sending modules.",
+    description: "Customized email dispatch service within Fidelizador 3.0, an email marketing platform with an installed capacity of over 20 million emails per day. I led this initiative alongside the development of the bulk-sending modules.",
     tags: ["Symfony", "PHP", "Python", "Redis", "MySQL"],
     link: "https://fidelizador.com",
   }
